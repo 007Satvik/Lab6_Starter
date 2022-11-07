@@ -77,14 +77,17 @@ function saveRecipesToStorage(recipes) {
 function initFormHandler() {
 
   // B2. TODO - Get a reference to the <form> element
-  var ref = document.querySelector('form');
+  var ref = document.getElementById("new-recipe");
   // B3. TODO - Add an event listener for the 'submit' event, which fires when the
   //            submit button is clicked
   var submit = document.querySelector('button[type="submit"]')
   submit.addEventListener('click', () => {
     var newObj = new FormData(ref);
     var recipeObj = new Object();
-    var recObj = createElement('recipe-card');
+    for(const pair of newObj.entries()){
+      Object.assign(recipeObj, pair);
+    }
+    var recObj = document.createElement('recipe-card');
     recObj.data = recipeObj;
     let main = document.querySelector('main');
     main.append(recObj);
