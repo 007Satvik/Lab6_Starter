@@ -91,7 +91,6 @@ function initFormHandler() {
     recObj.data = recipeObj;
     let main = document.querySelector('main');
     main.append(recObj);
-    alert(localStorage);
   });
   // Steps B4-B9 will occur inside the event listener from step B3
   // B4. TODO - Create a new FormData object from the <form> element reference above
