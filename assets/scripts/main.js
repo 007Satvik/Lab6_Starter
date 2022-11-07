@@ -102,12 +102,12 @@ function initFormHandler() {
   // B8. TODO - Append this new <recipe-card> to <main>
   // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
   //            then save the recipes array back to localStorage
-  var danger = document.querySelector('.danger');
-  danger.addEventListener('submit', () => {
+  var danger = document.querySelector('button[type="button"]');
+  danger.addEventListener('click', () => {
     localStorage.clear();
     let main = document.querySelector('main');
     main.textContent = '';
-  })
+  });
   // B10. TODO - Get a reference to the "Clear Local Storage" button
   // B11. TODO - Add a click event listener to clear local storage button
   
